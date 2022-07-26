@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{430218C2-5D9C-4324-ABAE-91FDD7E03C5C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Project_C_Sharp</RootNamespace>
+    <AssemblyName>Project_C-Sharp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.29.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1_welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1_welcome.Designer.cs">
+      <DependentUpon>1_welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_1_customer_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_1_customer_login.Designer.cs">
+      <DependentUpon>2_1_customer_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_2_customer_register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_2_customer_register.Designer.cs">
+      <DependentUpon>2_2_customer_register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_3_customer_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_3_customer_menu.Designer.cs">
+      <DependentUpon>2_3_customer_menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_4_customer_menu_pic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_4_customer_menu_pic.Designer.cs">
+      <DependentUpon>2_4_customer_menu_pic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_5_customer_type1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_5_customer_type1.Designer.cs">
+      <DependentUpon>2_5_customer_type1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_6_customer_type2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_6_customer_type2.Designer.cs">
+      <DependentUpon>2_6_customer_type2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_7_customer_type3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_7_customer_type3.Designer.cs">
+      <DependentUpon>2_7_customer_type3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_8_customer_per_order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_8_customer_per_order.Designer.cs">
+      <DependentUpon>2_8_customer_per_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_9_customer_pay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_9_customer_pay.Designer.cs">
+      <DependentUpon>2_9_customer_pay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3_3_admin_check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_3_admin_check.Designer.cs">
+      <DependentUpon>3_3_admin_check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3_1_admin_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_1_admin_login.Designer.cs">
+      <DependentUpon>3_1_admin_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_customer_check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_customer_check.Designer.cs">
+      <DependentUpon>2_customer_check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_customer_reset_password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_customer_reset_password.Designer.cs">
+      <DependentUpon>2_customer_reset_password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_customer_howto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_customer_howto.Designer.cs">
+      <DependentUpon>2_customer_howto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3_4_admin_update_money.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_4_admin_update_money.Designer.cs">
+      <DependentUpon>3_4_admin_update_money.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3_5_admin_update_produck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_5_admin_update_produck.Designer.cs">
+      <DependentUpon>3_5_admin_update_produck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3_2_admin_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_2_admin_menu.Designer.cs">
+      <DependentUpon>3_2_admin_menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3_7_admin_all_history.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_7_admin_all_history.Designer.cs">
+      <DependentUpon>3_7_admin_all_history.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3_8_admin_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_8_admin_edit.Designer.cs">
+      <DependentUpon>3_8_admin_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3_admin_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_admin_print.Designer.cs">
+      <DependentUpon>3_admin_print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3_9_admin_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_9_admin_print.Designer.cs">
+      <DependentUpon>3_9_admin_print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="1_welcome.resx">
+      <DependentUpon>1_welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_1_customer_login.resx">
+      <DependentUpon>2_1_customer_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_2_customer_register.resx">
+      <DependentUpon>2_2_customer_register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_3_customer_menu.resx">
+      <DependentUpon>2_3_customer_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_4_customer_menu_pic.resx">
+      <DependentUpon>2_4_customer_menu_pic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_5_customer_type1.resx">
+      <DependentUpon>2_5_customer_type1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_6_customer_type2.resx">
+      <DependentUpon>2_6_customer_type2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_7_customer_type3.resx">
+      <DependentUpon>2_7_customer_type3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_8_customer_per_order.resx">
+      <DependentUpon>2_8_customer_per_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_9_customer_pay.resx">
+      <DependentUpon>2_9_customer_pay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_customer_check.resx">
+      <DependentUpon>2_customer_check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3_1_admin_login.resx">
+      <DependentUpon>3_1_admin_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3_3_admin_check.resx">
+      <DependentUpon>3_3_admin_check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_customer_reset_password.resx">
+      <DependentUpon>2_customer_reset_password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_customer_howto.resx">
+      <DependentUpon>2_customer_howto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3_4_admin_update_money.resx">
+      <DependentUpon>3_4_admin_update_money.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3_5_admin_update_produck.resx">
+      <DependentUpon>3_5_admin_update_produck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3_2_admin_menu.resx">
+      <DependentUpon>3_2_admin_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3_7_admin_all_history.resx">
+      <DependentUpon>3_7_admin_all_history.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3_8_admin_edit.resx">
+      <DependentUpon>3_8_admin_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3_admin_print.resx">
+      <DependentUpon>3_admin_print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3_9_admin_print.resx">
+      <DependentUpon>3_9_admin_print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\กรอบ welcome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\กรอบ welcome1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ลูกศร.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\กรอบ login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\กรอบสีครีม.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\กรอบสีขาว.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\กรอบสีน้ำเงินฟ้า.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ก่อนหน้า.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\งานนำเสนอสนุก ๆ แฟนคลับ ความชอบหลัก ลัทธิดิจิทัล สีชมพูและสีม่วง %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ตาราง %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ตารางสีดำ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\กรอบ จัสตุรัส สีขาวคลีน.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ลูกษรสีม่วง.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\type1_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\กรอบใส่รูป.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\type2_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\type3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ปุ่ม type กรอบรูป.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ลูกศร สีฟ้าหม่น.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\กรอบสีเขียวมิ้น.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\กรอบ สีดำ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\กรอบ สีดำา.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\กรอบสีดำ ยาว.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\type1_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\type1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\กรอบสีขาวคลีน.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\type2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\type2_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\กรอบสีแดง.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\type3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\type3_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\type3_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\type3_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\กรอบสีครีมขาว.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\กรอบใส่ที่อยู่.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\เส้นตาราง จัสตุรัส.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qr.395.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qr.3951.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\รีเฟรช.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
