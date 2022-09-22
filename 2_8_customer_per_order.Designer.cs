@@ -1,4 +1,4 @@
-﻿namespace Project_C_Sharp
+namespace Project_C_Sharp
 {
     partial class Form9
     {
