@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -79,6 +79,7 @@ namespace Project_C_Sharp
             wn.Show();
         }
 
+
         private void confirmBtn_Click_1(object sender, EventArgs e)
         {
             MySqlConnection conn = databaseConnection();
@@ -107,18 +108,34 @@ namespace Project_C_Sharp
                     Random random = new Random();
                     int random_number = random.Next();
 
-                    String sql1 = "INSERT INTO pre_order (name, address, phone_number, type, color, pin, payment_status, product_status, product_number, date) VALUES('" + tbname.Text + "','" + tbaddress.Text + "','" + phone.Text + "','" + comboBox1.Text + " ','" + "สีดำ" + "','" + pin.Text + "','" + "กำลังดำเนินการ" + "','" + "กำลังดำเนินการ" + "','" + random_number + "','" + dateTimePicker1.Value.ToString("dd/MM/yyyy") + "')";
-                    MySqlCommand cmd1 = new MySqlCommand(sql1, conn);
+                    MySqlConnection conn1 = databaseConnection();
                     conn.Open();
-                    int rows = cmd1.ExecuteNonQuery();
-                    conn.Close();
-                    if (rows > 0)
+                    MySqlCommand cmd;
+                    cmd = conn.CreateCommand();
+                    cmd.CommandText = $"SELECT * FROM pre_order WHERE product_number = '{random_number}'";
+                    MySqlDataReader row = cmd.ExecuteReader();
+                    if (row.HasRows)
                     {
-                        MessageBox.Show(random_number.ToString(), "กรุณาจดจำเลขติดตามสินค้า", MessageBoxButtons.OK);
+                        conn.Close();
+                        MessageBox.Show("มีข้อผิดพลาด", "ตรวจสอบความถูกต้องข้อมูล", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //phone.Focus();
+                    }
+                    else
+                    {
+                        String sql1 = "INSERT INTO pre_order (name, address, phone_number, type, color, pin, payment_status, product_status, product_number, date) VALUES('" + tbname.Text + "','" + tbaddress.Text + "','" + phone.Text + "','" + comboBox1.Text + " ','" + "สีดำ" + "','" + pin.Text + "','" + "กำลังดำเนินการ" + "','" + "กำลังดำเนินการ" + "','" + random_number + "','" + dateTimePicker1.Value.ToString("dd/MM/yyyy") + "')";
+                        MySqlCommand cmd1 = new MySqlCommand(sql1, conn);
+                        conn.Open();
+                        int rows = cmd1.ExecuteNonQuery();
+                        conn.Close();
 
-                        this.Hide();
-                        Form10 wn = new Form10();
-                        wn.Show();
+                        if (rows > 0)
+                        {
+                            MessageBox.Show(random_number.ToString(), "กรุณาจดจำเลขติดตามสินค้า", MessageBoxButtons.OK);
+
+                            this.Hide();
+                            Form10 wn = new Form10();
+                            wn.Show();
+                        }
                     }
                 }
                 else if (color2.Checked)
@@ -126,19 +143,34 @@ namespace Project_C_Sharp
                     Random random = new Random();
                     int random_number = random.Next();
 
-                    String sql1 = "INSERT INTO pre_order (name, address, phone_number, type, color, pin, payment_status, product_status, product_number, date) VALUES('" + tbname.Text + "','" + tbaddress.Text + "','" + phone.Text + "','" + comboBox1.Text + " ','" + "สีขาว" + "','" + pin.Text + "','" + "กำลังดำเนินการ" + "','" + "กำลังดำเนินการ" + "','" + random_number + "','" + dateTimePicker1.Value.ToString("dd/MM/yyyy") + "')";
-                    MySqlCommand cmd1 = new MySqlCommand(sql1, conn);
+                    MySqlConnection conn1 = databaseConnection();
                     conn.Open();
-                    int rows = cmd1.ExecuteNonQuery();
-                    conn.Close();
-
-                    if (rows > 0)
+                    MySqlCommand cmd;
+                    cmd = conn.CreateCommand();
+                    cmd.CommandText = $"SELECT * FROM pre_order WHERE product_number = '{random_number}'";
+                    MySqlDataReader row = cmd.ExecuteReader();
+                    if (row.HasRows)
                     {
-                        MessageBox.Show(random_number.ToString(), "กรุณาจดจำเลขติดตามสินค้า", MessageBoxButtons.OK);
+                        conn.Close();
+                        MessageBox.Show("มีข้อผิดพลาด", "ตรวจสอบความถูกต้องข้อมูล", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //phone.Focus();
+                    }
+                    else
+                    {
+                        String sql1 = "INSERT INTO pre_order (name, address, phone_number, type, color, pin, payment_status, product_status, product_number, date) VALUES('" + tbname.Text + "','" + tbaddress.Text + "','" + phone.Text + "','" + comboBox1.Text + " ','" + "สีขาว" + "','" + pin.Text + "','" + "กำลังดำเนินการ" + "','" + "กำลังดำเนินการ" + "','" + random_number + "','" + dateTimePicker1.Value.ToString("dd/MM/yyyy") + "')";
+                        MySqlCommand cmd1 = new MySqlCommand(sql1, conn);
+                        conn.Open();
+                        int rows = cmd1.ExecuteNonQuery();
+                        conn.Close();
 
-                        this.Hide();
-                        Form10 wn = new Form10();
-                        wn.Show();
+                        if (rows > 0)
+                        {
+                            MessageBox.Show(random_number.ToString(), "กรุณาจดจำเลขติดตามสินค้า", MessageBoxButtons.OK);
+
+                            this.Hide();
+                            Form10 wn = new Form10();
+                            wn.Show();
+                        }
                     }
                 }
                 else if (color3.Checked)
@@ -146,19 +178,34 @@ namespace Project_C_Sharp
                     Random random = new Random();
                     int random_number = random.Next();
 
-                    String sql1 = "INSERT INTO pre_order (name, address, phone_number, type, color, pin, payment_status, product_status, product_number, date) VALUES('" + tbname.Text + "','" + tbaddress.Text + "','" + phone.Text + "','" + comboBox1.Text + " ','" + "สีทอง" + "','" + pin.Text + "','" + "กำลังดำเนินการ" + "','" + "กำลังดำเนินการ" + "','"+ random_number +"','" + dateTimePicker1.Value.ToString("dd/MM/yyyy") + "')";
-                    MySqlCommand cmd1 = new MySqlCommand(sql1, conn);
+                    MySqlConnection conn1 = databaseConnection();
                     conn.Open();
-                    int rows = cmd1.ExecuteNonQuery();
-                    conn.Close();
-
-                    if (rows > 0)
+                    MySqlCommand cmd;
+                    cmd = conn.CreateCommand();
+                    cmd.CommandText = $"SELECT * FROM pre_order WHERE product_number = '{random_number}'";
+                    MySqlDataReader row = cmd.ExecuteReader();
+                    if (row.HasRows)
                     {
-                        MessageBox.Show(random_number.ToString(),"กรุณาจดจำเลขติดตามสินค้า", MessageBoxButtons.OK);
+                        conn.Close();
+                        MessageBox.Show("มีข้อผิดพลาด", "ตรวจสอบความถูกต้องข้อมูล", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //phone.Focus();
+                    }
+                    else
+                    {
+                        String sql1 = "INSERT INTO pre_order (name, address, phone_number, type, color, pin, payment_status, product_status, product_number, date) VALUES('" + tbname.Text + "','" + tbaddress.Text + "','" + phone.Text + "','" + comboBox1.Text + " ','" + "สีทอง" + "','" + pin.Text + "','" + "กำลังดำเนินการ" + "','" + "กำลังดำเนินการ" + "','" + random_number + "','" + dateTimePicker1.Value.ToString("dd/MM/yyyy") + "')";
+                        MySqlCommand cmd1 = new MySqlCommand(sql1, conn);
+                        conn.Open();
+                        int rows = cmd1.ExecuteNonQuery();
+                        conn.Close();
 
-                        this.Hide();
-                        Form10 wn = new Form10();
-                        wn.Show();
+                        if (rows > 0)
+                        {
+                            MessageBox.Show(random_number.ToString(), "กรุณาจดจำเลขติดตามสินค้า", MessageBoxButtons.OK);
+
+                            this.Hide();
+                            Form10 wn = new Form10();
+                            wn.Show();
+                        }
                     }
                 }
             }
